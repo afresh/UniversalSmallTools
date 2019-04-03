@@ -24,14 +24,15 @@ namespace UST.Winform.Windows
                 }
 
                 var timeSpan = DtpTime.Value - DateTime.Now;
-                Process.Start("c:/windows/system32/shutdown.exe", "-s -t " + timeSpan.TotalMilliseconds);
-
+                //Process.Start("c:/windows/system32/shutdown.exe", "-s -t " + Math.Ceiling(timeSpan.TotalSeconds));
+                Process.Start("cmd.exe", "/cshutdown -s -t " + Math.Ceiling(timeSpan.TotalSeconds));
                 TmrCountDown.Enabled = true;
                 BtnSetShutdown.Text = @"取消关机";
             }
             else
             {
-                Process.Start("c:/windows/system32/shutdown.exe", "-a");
+                //Process.Start("c:/windows/system32/shutdown.exe", "-a");
+                Process.Start("cmd.exe", "/cshutdown -a");
                 TmrCountDown.Enabled = false;
                 LblCountDown.Text = @"倒计时：0天0小时0分0秒";
                 BtnSetShutdown.Text = @"设置关机";
@@ -41,6 +42,11 @@ namespace UST.Winform.Windows
         private void TmrCountDown_Tick(object sender, EventArgs e)
         {
             var timeSpan = DtpTime.Value - DateTime.Now;
+            if (timeSpan.TotalSeconds < 0)
+            {
+                TmrCountDown.Enabled = false;
+                LblCountDown.Text = @"倒计时：0天0小时0分0秒";
+            }
             LblCountDown.Text = @"倒计时：" + timeSpan.Days + @"天" + timeSpan.Hours + @"小时" + timeSpan.Minutes + @"分" + timeSpan.Seconds + @"秒";
         }
     }
