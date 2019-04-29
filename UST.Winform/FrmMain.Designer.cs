@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.BtnRegularlyShutdown = new System.Windows.Forms.Button();
+            this.BtnActivateWin10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnRegularlyShutdown
@@ -45,11 +46,25 @@
             this.BtnRegularlyShutdown.UseVisualStyleBackColor = true;
             this.BtnRegularlyShutdown.Click += new System.EventHandler(this.BtnRegularlyShutdown_Click);
             // 
+            // BtnActivateWin10
+            // 
+            this.BtnActivateWin10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnActivateWin10.AutoSize = true;
+            this.BtnActivateWin10.Location = new System.Drawing.Point(12, 55);
+            this.BtnActivateWin10.Name = "BtnActivateWin10";
+            this.BtnActivateWin10.Size = new System.Drawing.Size(214, 37);
+            this.BtnActivateWin10.TabIndex = 1;
+            this.BtnActivateWin10.Text = "Kms激活Win10工具";
+            this.BtnActivateWin10.UseVisualStyleBackColor = true;
+            this.BtnActivateWin10.Click += new System.EventHandler(this.BtnActivateWin10_Click);
+            // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(238, 209);
+            this.Controls.Add(this.BtnActivateWin10);
             this.Controls.Add(this.BtnRegularlyShutdown);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -67,6 +82,7 @@
         #endregion
 
         private System.Windows.Forms.Button BtnRegularlyShutdown;
+        private System.Windows.Forms.Button BtnActivateWin10;
     }
 }
 

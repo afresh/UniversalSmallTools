@@ -16,5 +16,11 @@ namespace UST.Winform
             var frmRegularlyShutdown = new FrmRegularlyShutdown();
             frmRegularlyShutdown.Show();
         }
+
+        private void BtnActivateWin10_Click(object sender, EventArgs e)
+        {
+            var frmActivateWin10 = new FrmActivateWin10();
+            frmActivateWin10.Show();
+        }
     }
 }

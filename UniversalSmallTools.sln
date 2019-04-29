@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UST.Winform", "UST.Winform\UST.Winform.csproj", "{EA8EE7BF-4B64-423C-9FD4-7776D00A8EDC}"
 EndProject
@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{0B120F
 	ProjectSection(SolutionItems) = preProject
 		Resoures\Images\tool.png = Resoures\Images\tool.png
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UST.Utility", "UST.Utility\UST.Utility.csproj", "{AA77DED2-F13D-4D73-9EB1-95D0BE8F0831}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +24,10 @@ Global
 		{EA8EE7BF-4B64-423C-9FD4-7776D00A8EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA8EE7BF-4B64-423C-9FD4-7776D00A8EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA8EE7BF-4B64-423C-9FD4-7776D00A8EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA77DED2-F13D-4D73-9EB1-95D0BE8F0831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA77DED2-F13D-4D73-9EB1-95D0BE8F0831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA77DED2-F13D-4D73-9EB1-95D0BE8F0831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA77DED2-F13D-4D73-9EB1-95D0BE8F0831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
