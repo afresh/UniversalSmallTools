@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.BtnRegularlyShutdown = new System.Windows.Forms.Button();
             this.BtnActivateWin10 = new System.Windows.Forms.Button();
+            this.BtnActivateVisio2016 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnRegularlyShutdown
@@ -59,11 +60,25 @@
             this.BtnActivateWin10.UseVisualStyleBackColor = true;
             this.BtnActivateWin10.Click += new System.EventHandler(this.BtnActivateWin10_Click);
             // 
+            // BtnActivateVisio2016
+            // 
+            this.BtnActivateVisio2016.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnActivateVisio2016.AutoSize = true;
+            this.BtnActivateVisio2016.Location = new System.Drawing.Point(12, 98);
+            this.BtnActivateVisio2016.Name = "BtnActivateVisio2016";
+            this.BtnActivateVisio2016.Size = new System.Drawing.Size(214, 37);
+            this.BtnActivateVisio2016.TabIndex = 2;
+            this.BtnActivateVisio2016.Text = "Kms激活Visio2016工具";
+            this.BtnActivateVisio2016.UseVisualStyleBackColor = true;
+            this.BtnActivateVisio2016.Click += new System.EventHandler(this.BtnActivateVisio2016_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(238, 209);
+            this.Controls.Add(this.BtnActivateVisio2016);
             this.Controls.Add(this.BtnActivateWin10);
             this.Controls.Add(this.BtnRegularlyShutdown);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -83,6 +98,7 @@
 
         private System.Windows.Forms.Button BtnRegularlyShutdown;
         private System.Windows.Forms.Button BtnActivateWin10;
+        private System.Windows.Forms.Button BtnActivateVisio2016;
     }
 }
 

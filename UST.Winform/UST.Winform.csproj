@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\FrmActivateVisio2016.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\FrmActivateVisio2016.Designer.cs">
+      <DependentUpon>FrmActivateVisio2016.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\FrmActivateWin10.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Windows\FrmActivateVisio2016.resx">
+      <DependentUpon>FrmActivateVisio2016.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\FrmActivateWin10.resx">
       <DependentUpon>FrmActivateWin10.cs</DependentUpon>
     </EmbeddedResource>

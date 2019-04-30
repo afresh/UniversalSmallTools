@@ -22,5 +22,11 @@ namespace UST.Winform
             var frmActivateWin10 = new FrmActivateWin10();
             frmActivateWin10.Show();
         }
+
+        private void BtnActivateVisio2016_Click(object sender, EventArgs e)
+        {
+            var frmActivateVisio2016 = new FrmActivateVisio2016();
+            frmActivateVisio2016.Show();
+        }
     }
 }

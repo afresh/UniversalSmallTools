@@ -1,24 +1,25 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using UST.Utility;
 
 namespace UST.Winform.Windows
 {
-    public partial class FrmActivateWin10 : Form
+    public partial class FrmActivateVisio2016 : Form
     {
-        public FrmActivateWin10()
+        public FrmActivateVisio2016()
         {
             InitializeComponent();
         }
 
-        private void BtnActivate_Click(object sender, System.EventArgs e)
+        private void BtnActivate_Click(object sender, EventArgs e)
         {
             var activationCode = TbActivationCode.Text.Trim();
             var kms = TbKms.Text.Trim();
             if (!Regex.IsMatch(activationCode, RegExpr.Win10ActivationCode))
             {
-                MessageBox.Show("请输入正确的win10激活码（如：W269N-WFGWX-YVC9B-4J6C9-T83GX，请自行百度）");
+                MessageBox.Show("请输入正确的visio2016激活码（如：W9WC2-JN9W2-H4CBV-24QR7-M4HB8，请自行百度）");
                 return;
             }
             if (!Regex.IsMatch(kms, RegExpr.Host))
@@ -28,11 +29,9 @@ namespace UST.Winform.Windows
             }
 
             var strCmd = @"
-                slmgr.vbs -upk
-                slmgr.vbs -ipk {ActivationCode}
-                slmgr.vbs -skms {Kms}
-                slmgr.vbs -ato
-                slmgr.vbs -dlv
+                cscript ospp.vbs /inpkey:{ActivationCode}
+                cscript ospp.vbs /sethst:{Kms}
+                cscript ospp.vbs /act
                 ";
             strCmd = strCmd.Replace("{ActivationCode}", activationCode).Replace("{Kms}", kms);
 
